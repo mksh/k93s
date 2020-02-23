@@ -50,7 +50,7 @@ make test
 TODO
 ====
 - [ ] validation for config, including typing checks
-- [ ] add support for dqlite-backend K3S cluster
+- [ ] add support for dqlite-powered multi node K3S cluster
 - [ ] add setup script with versioning
 - [ ] add read the docs entry
 - [ ] add CI
