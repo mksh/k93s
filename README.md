@@ -13,6 +13,8 @@ k93s is experimental and yet unstable software!
 Install
 =======
 
+Install Kubectl: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+
 Fedora 31+ Quick Start
 -----------------------
 
