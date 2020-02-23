@@ -26,8 +26,8 @@ roles/k8s-master
 A role for setting up master node.
 
 - *tasks/* - location for all tasks
-- *tasks/<flavor>.yml* - location for flavor tasks
-- *templates/<flavor>/* - location for templates
+- *tasks/__flavor__.yml* - location for flavor tasks
+- *templates/__flavor__/* - location for templates
 - *defaults/main.yml* - location for all default variable values
 
 
@@ -37,8 +37,8 @@ roles/k8s-agent
 A role for setting up agent node.
 
 - *tasks/* - location for all tasks
-- *tasks/<flavor>.yml* - location for flavor tasks
-- *templates/<flavor>/* - location for templates
+- *tasks/__flavor__.yml* - location for flavor tasks
+- *templates/__flavor__/* - location for templates
 - *defaults/main.yml* - location for all default variable values
 
 
@@ -48,4 +48,4 @@ roles/k8s-common
 A container for Kubernetes install boilerplate, 
 e.g. Ansible tasks shared for master and agent nodes.
 
-- *tasks/<flavor>.yml* - location for flavor tasks
+- *tasks/__flavor__.yml* - location for flavor tasks
