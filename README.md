@@ -50,11 +50,14 @@ make test
 TODO
 ====
 - [ ] validation for config, including typing checks
+- [ ] add setup script with versioning
+- [ ] add read the docs entry
 - [ ] add CI
 - [ ] add PyPI entry
 - [ ] create Debian & RPM distributions
 - [ ] add microk8s support
 - [ ] add support for OSX/qemu+hvf hosts
+- [ ] add some non-libvirt backends
 
 
 CREDITS
