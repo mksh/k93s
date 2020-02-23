@@ -19,6 +19,9 @@ up:
 down:
 	python3 -m k93s --config-file="$(K_93_CONFIG)" teardown
 
+hostconfig:
+	python3 -m k93s --config-file="$(K_93_CONFIG)" kubectl
+
 test:
 	python3 -m nose -sv --nologcapture k93s.test --with-cov --cov=k93s --cov-report=term-missing
 

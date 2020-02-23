@@ -91,6 +91,19 @@ def kubernetes(ctx):
                                           tmpdirname)
 
 
+@cli.command()
+@click.pass_context
+def kubectl(ctx):
+    """Configure kubectl for current user to facilitate cluster."""
+    with _with_config(ctx) as tmpdirname:
+        inventory_contents = k93s.vms.inventory(tmpdirname, **ctx.obj)
+        k93s.provision.configure_kubectl(
+            inventory_contents,
+            tmpdirname,
+            click.confirm('REWRITE ./.kube/config ?'),
+        )
+
+
 def main():
     """Bind CLI application logic."""
     cli()  # pragma: no cover

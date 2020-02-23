@@ -4,7 +4,6 @@ k93s
 Provision multi-node stripped-down Kubernetes on Dev Laptop in 9 minutes with QEMU.
 
 
-
 STATUS
 ======
 
@@ -22,8 +21,10 @@ dnf install libvirt bridge-utils libvirt virt-install qemu-kvm
 gpasswd -a user libvirt
 gpasswd -a user qemu
 (relogin into session)
-cp .k93s.default.config .k93s.working.config
-make up
+pip3 install --user -r requirements.txt
+python3 setup.py install
+python3 -m k93s kubernetes
+python3 -m k93s kubectl
 ```
 
 
@@ -42,7 +43,7 @@ How it works ?
 How to test ?
 =============
 ```
-pip3 install -r requirements-test.txt
+pip3 install --user -r requirements-test.txt
 make test
 ```
 

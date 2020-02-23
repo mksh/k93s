@@ -106,26 +106,27 @@ centos-8
 
     def test_spinup_unknown_config(self):
         test_config_path = 'k93s/test/.notexist'
-        # Test creating configuration.
         res = self.runner.invoke(cli, ['--config-file', test_config_path, 'spinup'])
         self.assertEqual(res.exit_code, 5)
 
     def test_spinup(self):
         test_config_path = 'k93s/test/test_config/.k93s.main'
-        # Test creating configuration.
         res = self.runner.invoke(cli, ['--config-file', test_config_path, 'spinup'])
         self.assertEqual(res.exit_code, 0)
         self.assertIn('Going to invoke action spinup on VMs', res.output)
 
     def test_teardown(self):
         test_config_path = 'k93s/test/test_config/.k93s.main'
-        # Test creating configuration.
         res = self.runner.invoke(cli, ['--config-file', test_config_path, 'teardown'], input='y\n')
         self.assertEqual(res.exit_code, 0)
         self.assertIn('Going to invoke action teardown on VMs', res.output)
 
     def test_kubernetes(self):
         test_config_path = 'k93s/test/test_config/.k93s.main'
-        # Test creating configuration.
         res = self.runner.invoke(cli, ['--config-file', test_config_path, 'kubernetes'])
+        self.assertIn('Done Ansible, removing directory now', res.output)
+
+    def test_kubectl(self):
+        test_config_path = 'k93s/test/test_config/.k93s.main'
+        res = self.runner.invoke(cli, ['--config-file', test_config_path, 'kubectl'], input='n\n')
         self.assertIn('Done Ansible, removing directory now', res.output)
