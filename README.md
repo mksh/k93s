@@ -49,9 +49,12 @@ make test
 
 TODO
 ====
-- add microk8s support
-- add support for OSX/qemu+hvf hosts
-- validation for config, including typing checks
+- [ ] validation for config, including typing checks
+- [ ] add CI
+- [ ] add PyPI entry
+- [ ] create Debian & RPM distributions
+- [ ] add microk8s support
+- [ ] add support for OSX/qemu+hvf hosts
 
 
 CREDITS
