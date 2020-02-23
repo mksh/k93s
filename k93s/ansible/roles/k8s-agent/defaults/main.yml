@@ -1,0 +1,9 @@
+# This file contains settings for Node
+# for all present flavours
+
+k_93_flavor: k3s
+
+# k3s
+k3s_systemd_dir: /etc/systemd/system
+k3s_version: v0.8.1
+k3s_master_ip: "{{ hostvars[groups['kubernetes_master'][0]]['ansible_host'] | default(groups['kubernetes_master'][0]) }}"

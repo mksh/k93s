@@ -1,0 +1,4 @@
+__pycache__/
+.k93s.working.config
+venv/
+.coverage

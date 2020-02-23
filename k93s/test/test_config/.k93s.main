@@ -1,0 +1,13 @@
+k93s:
+  masters:
+    distro: centos-8
+    memory: 384
+    root_disk_size: 10
+    root_password: '!!testtesttest'
+    vcpus: 1
+  name: testcluster
+  vms_backend: k93s.test.test_main.backend
+  vms_backend_config:
+    libvirt_uri: qemu:///system
+    root_password: root
+    ssh_key_file: ~/.ssh/id_rsa.pub

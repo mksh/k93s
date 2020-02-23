@@ -1,0 +1,18 @@
+---
+
+- import_tasks: "roles/k8s-common/tasks/{{ k_93_flavor }}.yml"
+
+- name: Copy K3s service file
+  template:
+    src: "k3s/k3s-node.service.j2"
+    dest: "{{ k3s_systemd_dir }}/k3s-node.service"
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Enable and check K3s service
+  systemd:
+    name: k3s-node
+    daemon_reload: yes
+    state: restarted
+    enabled: yes

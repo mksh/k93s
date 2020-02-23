@@ -1,0 +1,15 @@
+---
+
+- hosts: kubernetes_master
+  gather_facts: yes
+  roles:
+    - k8s-master
+  tags:
+    - k8s-master
+
+- hosts: kubernetes_agent
+  gather_facts: yes
+  roles:
+    - k8s-agent
+  tags:
+    - k8s-master
