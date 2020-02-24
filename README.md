@@ -34,7 +34,7 @@ How it works ?
 ==============
 - python3
 - qemu+KVM
-- virt-lighting
+- virt-lightning
 - ansible
 
 
