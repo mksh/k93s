@@ -52,15 +52,18 @@ make test
 TODO
 ====
 - [ ] validation for config, including typing checks
+- [ ] running multiple kubernetes cluster on the same host
 - [ ] add support for dqlite-powered multi node K3S cluster
 - [ ] add setup script with versioning
 - [ ] add read the docs entry
+- [ ] add tox-based testing for multiple Python 3 versions
 - [ ] add CI
 - [ ] add PyPI entry
 - [ ] create Debian & RPM distributions
 - [ ] add microk8s support
 - [ ] add support for OSX/qemu+hvf hosts
 - [ ] add some non-libvirt backends
+- [ ] add integration testing
 
 
 CREDITS
